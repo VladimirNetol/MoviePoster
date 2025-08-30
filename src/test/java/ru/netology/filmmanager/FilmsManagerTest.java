@@ -60,4 +60,22 @@ public class FilmsManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+    public void shouldFindMin() {
+        FilmsManager manager = new FilmsManager(5);
+
+        String Film1 = "Один дома";
+        String Film2 = "Пираты карибского моря";
+        String Film3 = "Убить Билла";
+
+
+        manager.addNewFilm(Film1);
+        manager.addNewFilm(Film2);
+        manager.addNewFilm(Film3);
+
+        String[] expected = {Film3, Film2, Film1};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
