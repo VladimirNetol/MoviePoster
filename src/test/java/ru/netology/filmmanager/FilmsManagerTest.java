@@ -17,21 +17,21 @@ public class FilmsManagerTest {
 
     @Test
     public void shouldFindAll() {
-        String Film1 = "Один дома";
-        String Film2 = "Пираты карибского моря";
-        String Film3 = "Убить Билла";
-        String Film4 = "Смешарики в кино";
-        String Film5 = "Черепашки-ниндзя";
-        String Film6 = "Судья Дредд";
+        String film1 = "Один дома";
+        String film2 = "Пираты карибского моря";
+        String film3 = "Убить Билла";
+        String film4 = "Смешарики в кино";
+        String film5 = "Черепашки-ниндзя";
+        String film6 = "Судья Дредд";
 
-        manager.addNewFilm(Film1);
-        manager.addNewFilm(Film2);
-        manager.addNewFilm(Film3);
-        manager.addNewFilm(Film4);
-        manager.addNewFilm(Film5);
-        manager.addNewFilm(Film6);
+        manager.addNewFilm(film1);
+        manager.addNewFilm(film2);
+        manager.addNewFilm(film3);
+        manager.addNewFilm(film4);
+        manager.addNewFilm(film5);
+        manager.addNewFilm(film6);
 
-        String[] expected = {Film1, Film2, Film3, Film4, Film5, Film6};
+        String[] expected = {film1, film2, film3, film4, film5, film6};
         String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
@@ -41,21 +41,21 @@ public class FilmsManagerTest {
     public void shouldFindLastFive() {
         FilmsManager manager = new FilmsManager(5);
 
-        String Film1 = "Один дома";
-        String Film2 = "Пираты карибского моря";
-        String Film3 = "Убить Билла";
-        String Film4 = "Смешарики в кино";
-        String Film5 = "Черепашки-ниндзя";
-        String Film6 = "Судья Дредд";
+        String film1 = "Один дома";
+        String film2 = "Пираты карибского моря";
+        String film3 = "Убить Билла";
+        String film4 = "Смешарики в кино";
+        String film5 = "Черепашки-ниндзя";
+        String film6 = "Судья Дредд";
 
-        manager.addNewFilm(Film1);
-        manager.addNewFilm(Film2);
-        manager.addNewFilm(Film3);
-        manager.addNewFilm(Film4);
-        manager.addNewFilm(Film5);
-        manager.addNewFilm(Film6);
+        manager.addNewFilm(film1);
+        manager.addNewFilm(film2);
+        manager.addNewFilm(film3);
+        manager.addNewFilm(film4);
+        manager.addNewFilm(film5);
+        manager.addNewFilm(film6);
 
-        String[] expected = {Film6, Film5, Film4, Film3, Film2};
+        String[] expected = {film6, film5, film4, film3, film2};
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
@@ -64,16 +64,16 @@ public class FilmsManagerTest {
     public void shouldFindMin() {
         FilmsManager manager = new FilmsManager(5);
 
-        String Film1 = "Один дома";
-        String Film2 = "Пираты карибского моря";
-        String Film3 = "Убить Билла";
+        String film1 = "Один дома";
+        String film2 = "Пираты карибского моря";
+        String film3 = "Убить Билла";
 
 
-        manager.addNewFilm(Film1);
-        manager.addNewFilm(Film2);
-        manager.addNewFilm(Film3);
+        manager.addNewFilm(film1);
+        manager.addNewFilm(film2);
+        manager.addNewFilm(film3);
 
-        String[] expected = {Film3, Film2, Film1};
+        String[] expected = {film3, film2, film1};
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);

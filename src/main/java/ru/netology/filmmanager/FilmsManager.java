@@ -1,7 +1,7 @@
 package ru.netology.filmmanager;
 
 public class FilmsManager {
-    private String[] Movies = new String[0];
+    private String[] movies = new String[0];
     private int movieThreshold;
 
     public FilmsManager() {
@@ -13,28 +13,28 @@ public class FilmsManager {
     }
 
     public void addNewFilm(String NewFilm) {
-        String[] tmp = new String[Movies.length + 1];
-        for (int i = 0; i < Movies.length; i++) {
-            tmp[i] = Movies[i];
+        String[] tmp = new String[movies.length + 1];
+        for (int i = 0; i < movies.length; i++) {
+            tmp[i] = movies[i];
         }
         tmp[tmp.length - 1] = NewFilm;
-        Movies = tmp;
+        movies = tmp;
     }
 
     public String[] findAll() {
-        return Movies;
+        return movies;
     }
 
     public String[] findLast() {
         int resultLeight;
-        if (Movies.length < movieThreshold) {
-            resultLeight = Movies.length;
+        if (movies.length < movieThreshold) {
+            resultLeight = movies.length;
         } else {
             resultLeight = movieThreshold;
         }
         String[] result = new String[resultLeight];
         for (int i = 0; i < resultLeight; i++) {
-            result[i] = Movies[Movies.length - 1 - i];
+            result[i] = movies[movies.length - 1 - i];
         }
         return result;
     }
